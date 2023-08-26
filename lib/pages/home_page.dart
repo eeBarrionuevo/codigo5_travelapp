@@ -105,6 +105,64 @@ class HomePage extends StatelessWidget {
               ItemListWidget(),
               ItemListWidget(),
               ItemListWidget(),
+              const SizedBox(
+                height: 12.0,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 230.0,
+                      decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(24.0),
+                      ),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(24.0),
+                            child: Image.network(
+                              "https://images.pexels.com/photos/17951248/pexels-photo-17951248/free-photo-of-ciudad-amanecer-punto-de-referencia-anochecer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 12.0,
+                          ),
+                          Text(
+                            "San Martine Island",
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on,
+                                  ),
+                                  Text("Lore ipsum"),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text("\$2.562"),
+                                  Text("/night"),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 12.0,
+              ),
             ],
           ),
         ),
@@ -112,13 +170,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
 
 // Container(
 //               width: double.infinity,
