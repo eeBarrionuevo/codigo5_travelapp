@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class ItemSliderWidget extends StatelessWidget {
   VoidCallback onTap;
+
   ItemSliderWidget({required this.onTap});
 
   @override
