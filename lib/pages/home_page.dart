@@ -86,6 +86,46 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 12.0,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    // borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: Row(
+                    children: [
+                      Image.network(
+                        "https://images.pexels.com/photos/3243020/pexels-photo-3243020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        width: 100,
+                        height: 90,
+                        fit: BoxFit.cover,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Thailand"),
+                            Text("10 nights for two/all inclusive"),
+                            Text("\$ 245.50"),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        child: Column(
+                          children: [
+                            Text("4.0"),
+                            Icon(Icons.star),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
