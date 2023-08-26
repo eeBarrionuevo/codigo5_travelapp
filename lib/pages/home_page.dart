@@ -116,8 +116,15 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 230.0,
                       decoration: BoxDecoration(
-                        color: Colors.amber,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(24.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.12),
+                            blurRadius: 5,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
                       ),
                       child: Column(
                         children: [
@@ -129,30 +136,67 @@ class HomePage extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          const SizedBox(
-                            height: 12.0,
-                          ),
-                          Text(
-                            "San Martine Island",
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.location_on,
+                          Padding(
+                            padding: const EdgeInsets.all(14.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "San Martine Island",
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w700,
                                   ),
-                                  Text("Lore ipsum"),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text("\$2.562"),
-                                  Text("/night"),
-                                ],
-                              ),
-                            ],
+                                ),
+                                SizedBox(
+                                  height: 4.0,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 14.0,
+                                          color: Color(0xff00f5d4),
+                                        ),
+                                        SizedBox(
+                                          width: 4.0,
+                                        ),
+                                        Text(
+                                          "Lore ipsum",
+                                          style: TextStyle(
+                                            color: Colors.black45,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "\$2.562",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 16.0,
+                                            color: Color(0xff00f5d4),
+                                          ),
+                                        ),
+                                        Text(
+                                          "/night",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14.0,
+                                            color: Colors.black45,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
