@@ -128,13 +128,45 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(24.0),
-                            child: Image.network(
-                              "https://images.pexels.com/photos/17951248/pexels-photo-17951248/free-photo-of-ciudad-amanecer-punto-de-referencia-anochecer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                              height: 200.0,
-                              fit: BoxFit.cover,
-                            ),
+                          Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(24.0),
+                                child: Image.network(
+                                  "https://images.pexels.com/photos/17951248/pexels-photo-17951248/free-photo-of-ciudad-amanecer-punto-de-referencia-anochecer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                  height: 200.0,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Positioned(
+                                bottom: -23,
+                                right: 16,
+                                child: Container(
+                                  height: 46,
+                                  width: 46,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff00f5d4),
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                      color: Colors.white,
+                                      width: 2,
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.18),
+                                        blurRadius: 12.0,
+                                      ),
+                                    ],
+                                  ),
+                                  child: const Icon(
+                                    Icons.topic_sharp,
+                                    color: Colors.white,
+                                    size: 18.0,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                           Padding(
                             padding: const EdgeInsets.all(14.0),
