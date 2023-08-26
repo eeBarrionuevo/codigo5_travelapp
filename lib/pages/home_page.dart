@@ -70,6 +70,9 @@ class HomePage extends StatelessWidget {
                   color: Color(0xff202020),
                 ),
               ),
+              const SizedBox(
+                height: 12.0,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
